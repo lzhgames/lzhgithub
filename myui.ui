@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="myres.qrc">
+    <normaloff>:/ico/res/icon/clock.ico</normaloff>:/ico/res/icon/clock.ico</iconset>
+  </property>
+  <widget class="QLCDNumber" name="lcdNumber">
+   <property name="geometry">
+    <rect>
+     <x>113</x>
+     <y>72</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDial" name="dial">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>170</y>
+     <width>50</width>
+     <height>64</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="myres.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>dial</sender>
+   <signal>actionTriggered(int)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
