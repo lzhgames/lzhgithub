@@ -11,8 +11,8 @@ class myWindow(QWidget,Ui_Form):
 
     def initUI(self):
         self.setupUi(self)
-        # self.buton=QPushButton(self)
-        # self.buton.setIcon(QIcon('./res/picture/001.jpg'))
+        self.buton=QPushButton(self)
+        self.buton.setIcon(QIcon('./res/picture/001.jpg'))
         self.show()
 
 if __name__=='__main__':
